@@ -1,4 +1,4 @@
-{% set version = '2.0.2' %}
+{% set version = "2.0.3" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/vegclust_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/vegclust/vegclust_{{ version }}.tar.gz
-  sha256: dd028abd8fd87f7ae264731046b83a210a98eee3c9ef694eec4dc3a51e8e61a3
+  sha256: 5b3cc4da0eb41de2b636cd09274e5e1e0305b16997221faebcd36025bd552991
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -40,9 +40,7 @@ test:
 about:
   home: https://emf-creaf.github.io/vegclust/
   license: GPL-2.0-or-later
-  summary: 'A set of functions to: (1) perform fuzzy clustering of vegetation data (De Caceres
-    et al, 2010) <doi:10.1111/j.1654-1103.2010.01211.x>; (2) to assess ecological community
-    similarity on the basis of structure and composition (De Caceres et al, 2013) <doi:10.1111/2041-210X.12116>.'
+  summary: 'A set of functions to: (1) perform fuzzy clustering of vegetation data (De Caceres et al, 2010) <doi:10.1111/j.1654-1103.2010.01211.x>; (2) to assess ecological community similarity on the basis of structure and composition (De Caceres et al, 2013) <doi:10.1111/2041-210X.12116>.'
   license_family: GPL2
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
